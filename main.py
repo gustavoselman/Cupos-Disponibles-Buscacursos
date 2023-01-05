@@ -50,7 +50,7 @@ class BuscaCursos:
                 final = str(sigla) + str(": ") + str(nombre) + str(" --> ") + str(disponibles) + str("/") + str(ofrecidas)
                 ofrecidas = 0
                 disponibles = 0
-                close = WebDriverWait(self.driver, 100).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="btnClose"]'))).click()
+                WebDriverWait(self.driver, 100).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="btnClose"]'))).click()        # close
             if secciones > 1:
                 final = str(sigla) + str(": ") + str(nombre) + str(" --> ") + str(big_disponibles) + str("/") + str(big_ofrecidas)
         else:
@@ -83,7 +83,7 @@ class BuscaCursos:
                 final = str(sigla) + str(": ") + str(nombre) + str(" --> ") + str(disponibles) + str("/") + str(ofrecidas)
                 ofrecidas = 0
                 disponibles = 0
-                close = WebDriverWait(self.driver, 100).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="btnClose"]'))).click()
+                WebDriverWait(self.driver, 100).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="btnClose"]'))).click()        # close
             if len(secciones_de_interes) > 1:
                 final = str(sigla) + str(": ") + str(nombre) + str(" --> ") + str(big_disponibles) + str("/") + str(big_ofrecidas)
         print()
